@@ -1,0 +1,42 @@
+{
+  "name": "@davidrunger/vue-model-explorer",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "module": "./index.js",
+  "exports": {
+    ".": {
+      "import": "./index.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "4.0.9",
+    "cytoscape": "^3.31.1",
+    "cytoscape-dagre": "^2.5.0",
+    "lodash-es": "^4.17.21",
+    "pug": "^3.0.3",
+    "sass": "^1.86.0",
+    "tailwindcss": "4.0.9",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/language-plugin-pug": "^2.2.8",
+    "@vue/tsconfig": "^0.7.0",
+    "prettier": "^3.5.3",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0",
+    "vue-tsc": "^2.2.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

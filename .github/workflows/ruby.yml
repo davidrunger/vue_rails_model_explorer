@@ -1,0 +1,29 @@
+name: Ruby
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: runger_rails_model_explorer
+    steps:
+      - name: Check out code
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@922ebc4c5262cd14e07bb0e1db020984b6c064fe # v1.226.0
+        with:
+          bundler-cache: true
+          working-directory: runger_rails_model_explorer
+
+      - name: Run RuboCop
+        run: bin/rubocop
+
+      - name: Run RSpec
+        run: bin/rspec
