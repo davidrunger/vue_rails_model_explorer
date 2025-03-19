@@ -38,5 +38,12 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidrunger/vue_rails_model_explorer.git"
+  },
+  "homepage": "https://github.com/davidrunger/vue_rails_model_explorer/tree/main/vue-model-explorer#readme",
+  "author": "David Runger",
+  "license": "MIT"
 }
