@@ -21,14 +21,9 @@ Then, create an entrypoint something like this:
 import { ModelGraph } from '@davidrunger/vue-model-explorer';
 import { renderApp } from '@/lib/customized_vue';
 
+import '@davidrunger/vue-model-explorer/dist/vue-model-explorer.css'
+
 renderApp(ModelGraph);
-```
-
-So that Tailwind will include CSS for the Tailwind classes used by the `ModelGraph` component, add something like this to the CSS file where you `@import 'tailwindcss'`:
-
-```css
-/* app/assets/stylesheets/styles.css */
-@source '../../../node_modules/@davidrunger/vue-model-explorer/src';
 ```
 
 Now, launch a Vite development server and a Rails server.

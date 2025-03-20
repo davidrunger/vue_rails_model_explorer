@@ -1,40 +1,46 @@
 {
   "name": "@davidrunger/vue-model-explorer",
-  "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
+  "description": "Render info about your Rails models in a keyboard-navigable linked graph.",
+  "author": "David Runger",
   "type": "module",
-  "exports": {
-    ".": {
-      "import": "./index.js"
-    }
-  },
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "vue-tsc && vite build",
     "dev": "vite"
   },
+  "peerDependencies": {
+    "vue": "^3.5.13"
+  },
   "dependencies": {
-    "@tailwindcss/vite": "4.0.9",
     "cytoscape": "^3.31.1",
     "cytoscape-dagre": "^2.5.0",
-    "lodash-es": "^4.17.21",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.0.9",
+    "@vitejs/plugin-vue": "^5.2.3",
     "pug": "^3.0.3",
     "sass": "^1.86.0",
     "tailwindcss": "4.0.9",
-    "vue": "^3.5.13"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^5.2.1",
-    "@vue/language-plugin-pug": "^2.2.8",
-    "@vue/tsconfig": "^0.7.0",
-    "prettier": "^3.5.3",
-    "typescript": "~5.7.2",
-    "vite": "^6.2.0",
-    "vue-tsc": "^2.2.4"
+    "typescript": "^5.8.2",
+    "vite": "^6.2.2",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.2.8"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"
+    ],
+    "ignoredBuiltDependencies": [
+      "@parcel/watcher"
     ]
   },
+  "private": false,
   "publishConfig": {
     "access": "public"
   },
@@ -43,6 +49,5 @@
     "url": "git+https://github.com/davidrunger/vue_rails_model_explorer.git"
   },
   "homepage": "https://github.com/davidrunger/vue_rails_model_explorer/tree/main/vue-model-explorer#readme",
-  "author": "David Runger",
   "license": "MIT"
 }

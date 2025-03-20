@@ -1,3 +1,7 @@
+## v0.0.4 (2025-03-20)
+
+- Package compiled JavaScript.
+
 ## v0.0.3 (2025-03-19)
 
 - Remove `"module"` field from `package.json`.

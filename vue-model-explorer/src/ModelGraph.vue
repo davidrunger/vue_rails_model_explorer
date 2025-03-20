@@ -9,7 +9,7 @@
     h2.text-3xl.font-mono.italic.mb-0.pl-6 {{ focusedNodeData.modelName }}
 
     // Columns section.
-    ol.pl-6
+    ol.list-decimal.pl-6
       li(
         v-for="column in focusedNodeData.columns"
         :key="column.name"

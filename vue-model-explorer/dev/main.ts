@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
-import './style.css';
-import ModelGraph from './ModelGraph.vue';
+import ModelGraph from '../src/ModelGraph.vue';
+
+import '../src/index.css';
 
 createApp(ModelGraph).mount('#model-graph');
