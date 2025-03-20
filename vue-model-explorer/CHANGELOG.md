@@ -1,3 +1,7 @@
+## v0.0.5 (2025-03-20)
+
+- Prefix git tags with `npm/`.
+
 ## v0.0.4 (2025-03-20)
 
 - Package compiled JavaScript.

@@ -16,8 +16,9 @@ if [ "$publishedVersion" = "$version" ]; then
 fi
 
 # Create a git tag and push it to remote.
-git tag -a "v$version" -m ""
-git push origin "v$version"
+tag=npm/v$version
+git tag -a "$tag" -m "Version $version"
+git push origin "$tag"
 
 # Build the Vue component using Vite.
 pnpm build
