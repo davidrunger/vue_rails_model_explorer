@@ -1,0 +1,25 @@
+---
+version: 2
+updates:
+  - package-ecosystem: bundler
+    directory: "/runger_rails_model_explorer/"
+    schedule:
+      interval: daily
+      time: "04:04"
+      timezone: America/Chicago
+    allow:
+      - dependency-type: all
+
+  - package-ecosystem: npm
+    directory: '/vue-model-explorer/'
+    schedule:
+      interval: daily
+      time: '04:04'
+      timezone: America/Chicago
+
+  - package-ecosystem: github-actions
+    directory: '/'
+    schedule:
+      interval: daily
+      time: '04:04'
+      timezone: America/Chicago
