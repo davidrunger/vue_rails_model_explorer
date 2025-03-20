@@ -1,5 +1,6 @@
 ## Unreleased
-[no unreleased changes yet]
+### Fixed
+- Don't create non-prefix git tags.
 
 ## v0.2.0 (2025-03-20)
 - Prefix git tags with `gem/`.
