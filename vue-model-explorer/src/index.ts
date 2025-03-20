@@ -1,5 +1,5 @@
 import ModelGraph from './ModelGraph.vue';
 
-import './index.css'
+import './index.css';
 
 export { ModelGraph };
