@@ -1,8 +1,29 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import tailwindcss from '@tailwindcss/vite';
+import dts from 'vite-plugin-dts';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [tailwindcss(), vue()],
+  plugins: [
+    tailwindcss(),
+    vue(),
+    dts({
+      rollupTypes: true,
+    }),
+  ],
+  build: {
+    lib: {
+      entry: 'src/index.ts',
+      name: 'vue-model-explorer',
+      fileName: (format) => `index.${format}.js`,
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: {
+          vue: 'Vue',
+        },
+      },
+    },
+  },
 });
