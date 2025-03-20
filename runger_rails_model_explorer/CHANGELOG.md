@@ -1,4 +1,7 @@
 ## Unreleased
+[no unreleased changes yet]
+
+## v0.2.1 (2025-03-20)
 ### Fixed
 - Don't create non-prefix git tags.
 
