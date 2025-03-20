@@ -1,3 +1,5 @@
 # frozen_string_literal: true
 
 require 'bundler/gem_tasks'
+require 'runger_release_assistant'
+Bundler::GemHelper.tag_prefix = RungerReleaseAssistant.new.tag_prefix
