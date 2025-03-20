@@ -1,8 +1,8 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
     "allowJs": true,
     "declaration": true,
+    "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "module": "ESNext",
