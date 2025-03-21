@@ -1,3 +1,5 @@
+![Vue Rails Model Explorer](https://github.com/user-attachments/assets/ef0d2303-a70a-4e1c-8a96-5c40a7a1a484)
+
 # Vue Model Explorer
 
 Render info about your Rails models in a keyboard-navigable linked graph.
