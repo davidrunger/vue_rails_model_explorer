@@ -1,7 +1,10 @@
 <template lang="pug">
 .flex.h-dvh
-  // Left side: the graph visualization.
-  #graph-container.flex-1.h-dvh.border
+  // Left side: the graph visualization and footer container.
+  .flex.flex-col.h-dvh.flex-1
+    #graph-container.flex-1.h-dvh
+    footer.text-gray-800.bg-gray-100.p-2.text-center.text-sm.border-t.border-neutral-400
+      | Tip: Press Ctrl + K (or Cmd + K on macOS) to open the quick selector.
 
   // Right side: the details side panel.
   aside.flex.flex-col.w-100.border-l.p-2.text-lg
@@ -37,6 +40,24 @@
             span.font-mono {{ association.name }} #[span ({{ association.macro }} #[span.font-mono {{ association.class_name }}])]
     template(v-else)
       p No associations.
+
+  // Typeahead overlay (only shown when open).
+  template(v-if="typeaheadOpen")
+    .typeahead-overlay(type="dialog")
+      .typeahead-container
+        input.typeahead-input(
+          ref="typeaheadInput"
+          v-model="typeaheadQuery"
+          @keydown="handleTypeaheadKeydown"
+          placeholder="Type to search models..."
+        )
+        ul.typeahead-results
+          li(
+            v-for="(result, index) in searchResults"
+            :key="result.item.model_name"
+            :class="{ highlighted: index === typeaheadIndex }"
+            @click="selectModel(result.item)"
+          ) {{ result.item.model_name }}
 </template>
 
 <!-- `cytoscape-dagre` doesn't have up-to-date-types available, so we can't use TypeScript -->
@@ -44,8 +65,10 @@
 <script setup lang="js">
 import cytoscape from 'cytoscape';
 import dagre from 'cytoscape-dagre';
+import Fuse from 'fuse.js';
 import { sortBy } from 'lodash-es';
-import { computed, onMounted, onUnmounted, ref } from 'vue';
+import { computed, onMounted, ref, nextTick, watch } from 'vue';
+import { useEventListener } from '@vueuse/core';
 
 cytoscape.use(dagre);
 
@@ -77,7 +100,90 @@ const focusedNodeData = computed(() => {
 // Track which association is currently selected (for keyboard navigation and styling).
 const currentAssociationIndex = ref(0);
 
-// Build graph elements from the metadata.
+const typeaheadOpen = ref(false);
+const typeaheadQuery = ref('');
+const typeaheadIndex = ref(0);
+const typeaheadInput = ref(null);
+let fuse = null;
+
+// Build the fuse index from initialData.
+function initializeFuse() {
+  fuse = new Fuse(initialData, {
+    keys: ['model_name'],
+    threshold: 0.4,
+  });
+}
+
+// Reset the typeahead index when the query changes.
+watch(typeaheadQuery, () => {
+  typeaheadIndex.value = 0;
+});
+
+// Compute search results from typeaheadQuery.
+const searchResults = computed(() => {
+  if (!typeaheadQuery.value || !fuse) {
+    return [];
+  }
+  return fuse.search(typeaheadQuery.value);
+});
+
+// Open and focus the typeahead overlay.
+function openTypeahead() {
+  typeaheadOpen.value = true;
+  typeaheadQuery.value = '';
+  typeaheadIndex.value = 0;
+  nextTick(() => {
+    typeaheadInput.value?.focus();
+  });
+}
+
+// Close the typeahead overlay.
+function closeTypeahead() {
+  typeaheadOpen.value = false;
+}
+
+// Handle key events while typeahead is open.
+function handleTypeaheadKeydown(event) {
+  if (event.key === 'ArrowDown') {
+    event.preventDefault();
+    event.stopPropagation();
+    if (searchResults.value.length > 0) {
+      typeaheadIndex.value =
+        (typeaheadIndex.value + 1) % searchResults.value.length;
+    }
+  } else if (event.key === 'ArrowUp') {
+    event.preventDefault();
+    event.stopPropagation();
+    if (searchResults.value.length > 0) {
+      typeaheadIndex.value =
+        (typeaheadIndex.value - 1 + searchResults.value.length) %
+        searchResults.value.length;
+    }
+  } else if (event.key === 'Enter') {
+    event.preventDefault();
+    event.stopPropagation(); // Prevent global keydown from firing after selection.
+    if (searchResults.value.length > 0) {
+      const selectedItem = searchResults.value[typeaheadIndex.value].item;
+      selectModel(selectedItem);
+    }
+  } else if (event.key === 'Escape') {
+    event.preventDefault();
+    event.stopPropagation();
+    closeTypeahead();
+  }
+}
+
+// Select a model from the typeahead.
+function selectModel(model) {
+  const node = cyInstance
+    .nodes()
+    .find((node) => node.id() === model.model_name);
+  if (node) {
+    focusNode(node);
+  }
+  closeTypeahead();
+}
+
 function buildGraphData(modelMetadata) {
   const elements = [];
   const modelNodes = {};
@@ -120,6 +226,8 @@ function buildGraphData(modelMetadata) {
 }
 
 onMounted(() => {
+  initializeFuse();
+
   const elements = buildGraphData(initialData);
   cyInstance = cytoscape({
     container: document.getElementById('graph-container'),
@@ -193,12 +301,47 @@ onMounted(() => {
     focusNode(evt.target);
   });
 
-  // Set up keyboard navigation.
-  document.addEventListener('keydown', handleKeydown);
-});
+  // Set up global key events.
+  useEventListener('keydown', (event) => {
+    // If typeahead is open, do not process global keys for graph navigation.
+    if (typeaheadOpen.value) return;
 
-onUnmounted(() => {
-  document.removeEventListener('keydown', handleKeydown);
+    // Open typeahead when Ctrl+k or Cmd+k is pressed.
+    if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+      event.preventDefault();
+      openTypeahead();
+      return;
+    }
+    if (!focusedNode.value) return;
+
+    const nodeData = focusedNode.value.data();
+    const associations = nodeData.associations || [];
+
+    if (event.key === 'ArrowUp') {
+      if (associations.length > 0) {
+        currentAssociationIndex.value =
+          (currentAssociationIndex.value - 1 + associations.length) %
+          associations.length;
+        highlightCurrentAssociation();
+      }
+      event.preventDefault();
+    } else if (event.key === 'ArrowDown') {
+      if (associations.length > 0) {
+        currentAssociationIndex.value =
+          (currentAssociationIndex.value + 1) % associations.length;
+        highlightCurrentAssociation();
+      }
+      event.preventDefault();
+    } else if (event.key === ' ' || event.key === 'Enter') {
+      // Follow the highlighted association.
+      if (associations.length > 0) {
+        const currentAssociation =
+          associations[currentAssociationIndex.value % associations.length];
+        findAssociationEdgeAndFocusTarget(nodeData, currentAssociation);
+      }
+      event.preventDefault();
+    }
+  });
 });
 
 // Focus a node: mark it, center the view, and update the side panel.
@@ -245,45 +388,12 @@ function highlightCurrentAssociation() {
     edge.addClass('highlighted-edge');
   }
 
-  setTimeout(() => {
+  nextTick(() => {
     document.querySelector('ul.associations li.selected')?.scrollIntoView({
       behavior: 'smooth',
       block: 'center',
     });
   });
-}
-
-// Handle keyboard navigation: up/down to cycle associations and space or enter to follow one.
-function handleKeydown(event) {
-  if (!focusedNode.value) return;
-
-  const focusedNodeData = focusedNode.value.data();
-  const associations = focusedNodeData.associations || [];
-
-  if (event.key === 'ArrowUp') {
-    if (associations.length > 0) {
-      currentAssociationIndex.value =
-        (currentAssociationIndex.value - 1 + associations.length) %
-        associations.length;
-      highlightCurrentAssociation();
-    }
-    event.preventDefault();
-  } else if (event.key === 'ArrowDown') {
-    if (associations.length > 0) {
-      currentAssociationIndex.value =
-        (currentAssociationIndex.value + 1) % associations.length;
-      highlightCurrentAssociation();
-    }
-    event.preventDefault();
-  } else if (event.key === ' ' || event.key === 'Enter') {
-    // Follow the highlighted association.
-    if (associations.length > 0) {
-      const currentAssociation =
-        associations[currentAssociationIndex.value % associations.length];
-      findAssociationEdgeAndFocusTarget(focusedNodeData, currentAssociation);
-    }
-    event.preventDefault();
-  }
 }
 
 function findAssociationEdgeAndFocusTarget(focusedNodeData, associationData) {
@@ -330,5 +440,51 @@ ul.associations {
       border-color: red;
     }
   }
+}
+
+.typeahead-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.typeahead-container {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+  width: 300px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.typeahead-input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.typeahead-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.typeahead-results li {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.typeahead-results li.highlighted {
+  background-color: #0074d9;
+  color: #fff;
 }
 </style>
