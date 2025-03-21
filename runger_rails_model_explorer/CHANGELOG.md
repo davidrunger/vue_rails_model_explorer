@@ -1,4 +1,7 @@
 ## Unreleased
+[no unreleased changes yet]
+
+## v0.2.2 (2025-03-20)
 - Bump `runger_release_assistant` from 4.2.1 to 4.3.1.
 
 ## v0.2.1 (2025-03-20)

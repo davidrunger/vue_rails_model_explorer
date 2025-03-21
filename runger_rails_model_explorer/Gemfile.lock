@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    runger_rails_model_explorer (0.2.1)
+    runger_rails_model_explorer (0.2.2)
       activerecord (>= 8.0.2)
 
 GEM
@@ -152,7 +152,7 @@ CHECKSUMS
   rubocop-performance (1.24.0) sha256=e5bd39ff3e368395b9af886927cc37f5892f43db4bd6c8526594352d5b4440b5
   rubocop-rspec (3.5.0) sha256=710c942fe1af884ba8eea75cbb8bdbb051929a2208880a6fc2e2dce1eed5304c
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
-  runger_rails_model_explorer (0.2.1)
+  runger_rails_model_explorer (0.2.2)
   runger_release_assistant (4.3.1) sha256=3246c925240739eb12b9e6b9526a77ea00fcf0a0941441ff5ffacefb7e3e4d83
   runger_style (5.7.0) sha256=200790f3998e0b924df17efc9d440ddec99508bae983ba2a63f42b80624762f0
   securerandom (0.4.1) sha256=cc5193d414a4341b6e225f0cb4446aceca8e50d5e1888743fac16987638ea0b1
