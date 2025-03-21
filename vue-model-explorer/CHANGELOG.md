@@ -1,4 +1,4 @@
-## v0.0.6 (2025-03-21)
+## v0.1.0 (2025-03-21)
 
 - Add quick-selector typeahead.
 
