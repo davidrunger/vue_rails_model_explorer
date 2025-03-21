@@ -1,3 +1,7 @@
+## v0.0.6 (2025-03-21)
+
+- Add quick-selector typeahead.
+
 ## v0.0.5 (2025-03-20)
 
 - Prefix git tags with `npm/`.
