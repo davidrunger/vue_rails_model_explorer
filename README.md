@@ -1,4 +1,4 @@
-![Vue Rails Model Explorer](https://github.com/user-attachments/assets/ef0d2303-a70a-4e1c-8a96-5c40a7a1a484)
+![Vue Rails Model Explorer](https://david-runger-public-uploads.s3.us-east-1.amazonaws.com/vue-rails-model-explorer.png)
 
 # Vue Rails Model Explorer
 
