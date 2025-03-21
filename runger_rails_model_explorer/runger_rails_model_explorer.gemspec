@@ -20,15 +20,16 @@ Gem::Specification.new do |spec|
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
+  non_lib_files_to_include = Set.new(%w[
+    LICENSE.txt
+    README.md
+  ])
   spec.files =
     IO.popen(%w[git ls-files -z], chdir: __dir__, err: IO::NULL) do |ls|
       ls.each_line("\x0", chomp: true).select do |f|
-        f.start_with?('lib/')
+        f.start_with?('lib/') || non_lib_files_to_include.include?(f)
       end
-    end + %w[
-      LICENSE.txt
-      README.md
-    ]
+    end
   spec.require_paths = ['lib']
 
   # Uncomment to register a new dependency of your gem
