@@ -20,9 +20,7 @@
             :title="`Null: ${column.null}\nDefault: ${column.default}`"
           )
             b.font-mono {{ column.name }}
-            |
-            |
-            span.text-neutral-400 ({{ column.type }})
+            i.ml-2.text-neutral-400 {{ column.type }}
 
   // Center: the graph visualization and footer container.
   .flex.flex-col.h-dvh.flex-1
@@ -35,7 +33,7 @@
   aside.flex.flex-col.w-100.border-l.p-2.text-lg
     // Model name with pin toggle.
     .flex.items-center.mb-2.pl-6
-      h2.text-3xl.font-mono.italic.mb-0 {{ focusedNodeData.modelName }}
+      h2.text-3xl.font-mono.font-bold.mb-0 {{ focusedNodeData.modelName }}
       button.ml-2(
         @click="toggleFocusedModelPinnedState"
         :title="isPinned(focusedNodeData.id) ? 'Unpin model' : 'Pin model'"
@@ -50,14 +48,11 @@
         :title="`Null: ${column.null}\nDefault: ${column.default}`"
       )
         b.font-mono {{ column.name }}
-        |
-        |
-        span.text-neutral-400 ({{ column.type }})
+        i.ml-2.text-neutral-400 {{ column.type }}
 
     // Associations section.
-    h3.text-center.mt-4 Associations
     template(v-if="focusedNodeData.associations.length")
-      ul.associations.list-none.pl-0.overflow-y-scroll
+      ul.associations.list-none.mt-8.pl-0.overflow-y-scroll
         li.text-sm.mb-2(
           v-for="(association, index) in focusedNodeData.associations"
           :key="association.name"
