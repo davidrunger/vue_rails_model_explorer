@@ -1,15 +1,46 @@
 <template lang="pug">
 .flex.h-dvh
-  // Left side: the graph visualization and footer container.
+  // Left side: pinned models sidebar
+  aside.pinned-models-sidebar.flex.flex-col.border-r.w-100
+    h3.text-xl.text-center.py-2.border-b Pinned Models
+    .overflow-y-auto.flex-1
+      .p-2.border-b(v-for="model in pinnedModels" :key="model.id")
+        .flex.justify-between.items-center.mb-1
+          h4.font-mono.italic.text-lg {{ model.modelName }}
+          button.text-gray-500(
+            @click="unpinModel(model.id)"
+            title="Unpin model"
+            class="hover:text-red-500"
+          )
+            span ✕
+        ol.list-decimal.pl-6.text-sm
+          li(
+            v-for="column in model.columns"
+            :key="column.name"
+            :title="`Null: ${column.null}\nDefault: ${column.default}`"
+          )
+            b.font-mono {{ column.name }}
+            |
+            |
+            span.text-neutral-400 ({{ column.type }})
+
+  // Center: the graph visualization and footer container.
   .flex.flex-col.h-dvh.flex-1
     #graph-container.flex-1.h-dvh
     footer.text-gray-800.bg-gray-100.p-2.text-center.text-sm.border-t.border-neutral-400
-      | Tip: Press Ctrl + K (or Cmd + K on macOS) to open the quick selector.
+      p Press #[b Ctrl + K] (or #[b Cmd + K] on macOS) to open the quick selector.
+      p Press #[b p] to pin/unpin a model.
 
   // Right side: the details side panel.
   aside.flex.flex-col.w-100.border-l.p-2.text-lg
-    // Model name.
-    h2.text-3xl.font-mono.italic.mb-0.pl-6 {{ focusedNodeData.modelName }}
+    // Model name with pin toggle.
+    .flex.items-center.mb-2.pl-6
+      h2.text-3xl.font-mono.italic.mb-0 {{ focusedNodeData.modelName }}
+      button.ml-2(
+        @click="toggleFocusedModelPinnedState"
+        :title="isPinned(focusedNodeData.id) ? 'Unpin model' : 'Pin model'"
+      )
+        span {{ isPinned(focusedNodeData.id) ? '📌' : '📍' }}
 
     // Columns section.
     ol.list-decimal.pl-6
@@ -79,9 +110,13 @@ if (!initialData) throw 'Missing data!';
 
 const focusedNode = ref(null);
 
+// Add a new ref for pinned models
+const pinnedModels = ref([]);
+
 const focusedNodeData = computed(() => {
   if (!focusedNode.value) {
     return {
+      id: '',
       modelName: '',
       columns: [],
       associations: [],
@@ -90,12 +125,37 @@ const focusedNodeData = computed(() => {
     const node = focusedNode.value;
 
     return {
+      id: node.id(),
       modelName: node.data('label'),
       columns: node.data('columns') || [],
       associations: node.data('associations') || [],
     };
   }
 });
+
+function isPinned(nodeId) {
+  return pinnedModels.value.some((model) => model.id === nodeId);
+}
+
+function toggleFocusedModelPinnedState() {
+  const nodeData = focusedNodeData.value;
+
+  if (isPinned(nodeData.id)) {
+    unpinModel(nodeData.id);
+  } else {
+    pinnedModels.value.push({
+      id: nodeData.id,
+      modelName: nodeData.modelName,
+      columns: nodeData.columns,
+    });
+  }
+}
+
+function unpinModel(nodeId) {
+  pinnedModels.value = pinnedModels.value.filter(
+    (model) => model.id !== nodeId,
+  );
+}
 
 // Track which association is currently selected (for keyboard navigation and styling).
 const currentAssociationIndex = ref(0);
@@ -339,6 +399,9 @@ onMounted(() => {
           associations[currentAssociationIndex.value % associations.length];
         findAssociationEdgeAndFocusTarget(nodeData, currentAssociation);
       }
+      event.preventDefault();
+    } else if (event.key === 'p') {
+      toggleFocusedModelPinnedState();
       event.preventDefault();
     }
   });
