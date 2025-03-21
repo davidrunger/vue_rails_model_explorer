@@ -1,6 +1,6 @@
 {
   "name": "@davidrunger/vue-model-explorer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Render info about your Rails models in a keyboard-navigable linked graph.",
   "author": "David Runger",
   "type": "module",

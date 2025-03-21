@@ -1,3 +1,7 @@
+## v0.2.0 (2025-03-21)
+
+- Support pinning the column lists of multiple models simultaneously.
+
 ## v0.1.0 (2025-03-21)
 
 - Add quick-selector typeahead.
