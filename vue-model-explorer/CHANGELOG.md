@@ -1,3 +1,7 @@
+## v0.2.2 (2025-03-22)
+
+- Update README screenshots.
+
 ## v0.2.1 (2025-03-21)
 
 - Add space between column name and type.
