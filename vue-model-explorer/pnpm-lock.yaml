@@ -13,10 +13,10 @@ importers:
         version: 13.0.0(vue@3.5.13(typescript@5.8.2))
       cytoscape:
         specifier: ^3.31.1
-        version: 3.31.1
+        version: 3.31.2
       cytoscape-dagre:
         specifier: ^2.5.0
-        version: 2.5.0(cytoscape@3.31.1)
+        version: 2.5.0(cytoscape@3.31.2)
       fuse.js:
         specifier: ^7.1.0
         version: 7.1.0
@@ -737,8 +737,8 @@ packages:
     peerDependencies:
       cytoscape: ^3.2.22
 
-  cytoscape@3.31.1:
-    resolution: {integrity: sha512-Hx5Mtb1+hnmAKaZZ/7zL1Y5HTFYOjdDswZy/jD+1WINRU8KVi1B7+vlHdsTwY+VCFucTreoyu1RDzQJ9u0d2Hw==}
+  cytoscape@3.31.2:
+    resolution: {integrity: sha512-/eOXg2uGdMdpGlEes5Sf6zE+jUG+05f3htFNQIxLxduOH/SsaUZiPBfAwP1btVIVzsnhiNOdi+hvDRLYfMZjGw==}
     engines: {node: '>=0.10'}
 
   dagre@0.8.5:
@@ -1947,12 +1947,12 @@ snapshots:
 
   csstype@3.1.3: {}
 
-  cytoscape-dagre@2.5.0(cytoscape@3.31.1):
+  cytoscape-dagre@2.5.0(cytoscape@3.31.2):
     dependencies:
-      cytoscape: 3.31.1
+      cytoscape: 3.31.2
       dagre: 0.8.5
 
-  cytoscape@3.31.1: {}
+  cytoscape@3.31.2: {}
 
   dagre@0.8.5:
     dependencies:
