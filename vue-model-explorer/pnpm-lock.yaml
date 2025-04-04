@@ -26,10 +26,10 @@ importers:
     devDependencies:
       '@tailwindcss/vite':
         specifier: 4.1.1
-        version: 4.1.1(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.2))
+        version: 4.1.1(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3))
       '@vitejs/plugin-vue':
         specifier: ^5.2.3
-        version: 5.2.3(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.2))(vue@3.5.13(typescript@5.8.2))
+        version: 5.2.3(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3))(vue@3.5.13(typescript@5.8.2))
       '@vue/language-plugin-pug':
         specifier: ^2.2.8
         version: 2.2.8
@@ -41,7 +41,7 @@ importers:
         version: 3.0.3
       sass:
         specifier: ^1.86.0
-        version: 1.86.2
+        version: 1.86.3
       tailwindcss:
         specifier: 4.1.1
         version: 4.1.1
@@ -50,10 +50,10 @@ importers:
         version: 5.8.2
       vite:
         specifier: ^6.2.2
-        version: 6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.2)
+        version: 6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3)
       vite-plugin-dts:
         specifier: ^4.5.3
-        version: 4.5.3(rollup@4.39.0)(typescript@5.8.2)(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.2))
+        version: 4.5.3(rollup@4.39.0)(typescript@5.8.2)(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3))
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.2)
@@ -1199,8 +1199,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  sass@1.86.2:
-    resolution: {integrity: sha512-Rpfn0zAIDqvnSb2DihJTDFjbhqLHu91Wqac9rxontWk7R+2txcPjuujMqu1eeoezh5kAblVCS5EdFdyr0Jmu+w==}
+  sass@1.86.3:
+    resolution: {integrity: sha512-iGtg8kus4GrsGLRDLRBRHY9dNVA78ZaS7xr01cWnS7PEMQyFtTqBiyCrfpTYTZXRWM94akzckYjh8oADfFNTzw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -1709,12 +1709,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.1.1
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.1
 
-  '@tailwindcss/vite@4.1.1(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.2))':
+  '@tailwindcss/vite@4.1.1(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3))':
     dependencies:
       '@tailwindcss/node': 4.1.1
       '@tailwindcss/oxide': 4.1.1
       tailwindcss: 4.1.1
-      vite: 6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.2)
+      vite: 6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3)
 
   '@types/argparse@1.0.38': {}
 
@@ -1724,9 +1724,9 @@ snapshots:
 
   '@types/web-bluetooth@0.0.21': {}
 
-  '@vitejs/plugin-vue@5.2.3(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.2))(vue@3.5.13(typescript@5.8.2))':
+  '@vitejs/plugin-vue@5.2.3(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3))(vue@3.5.13(typescript@5.8.2))':
     dependencies:
-      vite: 6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.2)
+      vite: 6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3)
       vue: 3.5.13(typescript@5.8.2)
 
   '@volar/language-core@2.4.12':
@@ -2423,7 +2423,7 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.39.0
       fsevents: 2.3.3
 
-  sass@1.86.2:
+  sass@1.86.3:
     dependencies:
       chokidar: 4.0.3
       immutable: 5.1.1
@@ -2472,7 +2472,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite-plugin-dts@4.5.3(rollup@4.39.0)(typescript@5.8.2)(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.2)):
+  vite-plugin-dts@4.5.3(rollup@4.39.0)(typescript@5.8.2)(vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3)):
     dependencies:
       '@microsoft/api-extractor': 7.52.1
       '@rollup/pluginutils': 5.1.4(rollup@4.39.0)
@@ -2485,13 +2485,13 @@ snapshots:
       magic-string: 0.30.17
       typescript: 5.8.2
     optionalDependencies:
-      vite: 6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.2)
+      vite: 6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3)
     transitivePeerDependencies:
       - '@types/node'
       - rollup
       - supports-color
 
-  vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.2):
+  vite@6.2.5(jiti@2.4.2)(lightningcss@1.29.3)(sass@1.86.3):
     dependencies:
       esbuild: 0.25.2
       postcss: 8.5.3
@@ -2500,7 +2500,7 @@ snapshots:
       fsevents: 2.3.3
       jiti: 2.4.2
       lightningcss: 1.29.3
-      sass: 1.86.2
+      sass: 1.86.3
 
   void-elements@3.1.0: {}
 
