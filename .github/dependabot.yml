@@ -4,22 +4,22 @@ updates:
   - package-ecosystem: bundler
     directory: "/runger_rails_model_explorer/"
     schedule:
-      interval: daily
-      time: "04:04"
+      interval: cron
+      cronjob: "4 4 * * *"
       timezone: America/Chicago
     allow:
       - dependency-type: all
 
   - package-ecosystem: npm
-    directory: '/vue-model-explorer/'
+    directory: "/vue-model-explorer/"
     schedule:
-      interval: daily
-      time: '04:04'
+      interval: cron
+      cronjob: "4 4 * * *"
       timezone: America/Chicago
 
   - package-ecosystem: github-actions
-    directory: '/'
+    directory: "/"
     schedule:
-      interval: daily
-      time: '04:04'
+      interval: cron
+      cronjob: "4 4 * * *"
       timezone: America/Chicago
