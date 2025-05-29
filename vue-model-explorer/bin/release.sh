@@ -2,6 +2,11 @@
 
 set -euo pipefail # exit on any error, don't allow undefined variables, pipes don't swallow errors
 
+if [ "$(branch)" != "$(main-branch)" ]; then
+  echo "Error: Not on main branch. First, merge PR to prepare the release."
+  exit 1
+fi
+
 # Get package name and version from package.json.
 version=$(node -p "require('./package.json').version")
 packageName=$(node -p "require('./package.json').name")
