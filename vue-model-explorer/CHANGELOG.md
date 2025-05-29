@@ -1,3 +1,7 @@
+## v0.3.0 (2025-05-29)
+
+- Update dependencies.
+
 ## v0.2.2 (2025-03-22)
 
 - Update README screenshots.
