@@ -1,3 +1,9 @@
+## v0.3.1 (2025-05-29)
+
+### Internal
+
+- Ensure we are on the main branch when releasing.
+
 ## v0.3.0 (2025-05-29)
 
 - Update dependencies.
