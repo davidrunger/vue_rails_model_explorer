@@ -32,7 +32,7 @@ importers:
         version: 6.0.0(vite@7.0.0(jiti@2.4.2)(lightningcss@1.30.1)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))
       '@vue/language-plugin-pug':
         specifier: ^3.0.0
-        version: 3.0.0
+        version: 3.0.1
       prettier:
         specifier: ^3.5.3
         version: 3.6.2
@@ -626,9 +626,6 @@ packages:
   '@volar/source-map@2.4.13':
     resolution: {integrity: sha512-l/EBcc2FkvHgz2ZxV+OZK3kMSroMr7nN3sZLF2/f6kWW66q8+tEL4giiYyFjt0BcubqJhBt6soYIrAPhg/Yr+Q==}
 
-  '@volar/source-map@2.4.16':
-    resolution: {integrity: sha512-4rBiAhOw4MfFTpkvweDnjbDkixpmWNgBws95rpu2oFdMprkTtqFEb8pUOxQ/ruru8/zXSYLwRNXNozznjW9Vtw==}
-
   '@volar/source-map@2.4.17':
     resolution: {integrity: sha512-QDybtQyO3Ms/NjFqNHTC5tbDN2oK5VH7ZaKrcubtfHBDj63n2pizHC3wlMQ+iT55kQXZUUAbmBX5L1C8CHFeBw==}
 
@@ -672,8 +669,8 @@ packages:
       typescript:
         optional: true
 
-  '@vue/language-plugin-pug@3.0.0':
-    resolution: {integrity: sha512-i3tBq3DueVPeELE6aC4oRzTzVdXRjgeCCHKEM1NNOeSwu8tMNXcNpBb/qfj+pViukqLM4AZ16G0LnBRys7QNag==}
+  '@vue/language-plugin-pug@3.0.1':
+    resolution: {integrity: sha512-t5yH35JUmHp8g5oIn23PFTN2qmMw6zXWiF4M1GskuDqH0Dzwzbyp8zsg4vm8dnnsFd+cFzlAOOeMYFHMcFwipA==}
 
   '@vue/reactivity@3.5.17':
     resolution: {integrity: sha512-l/rmw2STIscWi7SNJp708FK4Kofs97zc/5aEPQh4bOsReD/8ICuBcEmS7KGwDj5ODQLYWVN2lNibKJL1z5b+Lw==}
@@ -1850,8 +1847,6 @@ snapshots:
 
   '@volar/source-map@2.4.13': {}
 
-  '@volar/source-map@2.4.16': {}
-
   '@volar/source-map@2.4.17': {}
 
   '@volar/typescript@2.4.13':
@@ -1929,9 +1924,9 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.3
 
-  '@vue/language-plugin-pug@3.0.0':
+  '@vue/language-plugin-pug@3.0.1':
     dependencies:
-      '@volar/source-map': 2.4.16
+      '@volar/source-map': 2.4.17
       volar-service-pug: 0.0.64
 
   '@vue/reactivity@3.5.17':
