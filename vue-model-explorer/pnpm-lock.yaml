@@ -32,7 +32,7 @@ importers:
         version: 6.0.0(vite@7.0.5(jiti@2.4.2)(lightningcss@1.30.1)(sass@1.89.2))(vue@3.5.17(typescript@5.8.3))
       '@vue/language-plugin-pug':
         specifier: ^3.0.0
-        version: 3.0.2
+        version: 3.0.3
       prettier:
         specifier: ^3.5.3
         version: 3.6.2
@@ -670,8 +670,8 @@ packages:
       typescript:
         optional: true
 
-  '@vue/language-plugin-pug@3.0.2':
-    resolution: {integrity: sha512-8ZAy/zqsji98wdE3UCU81m45AB5gH26fdATY++opboIsSEEbA0VbqZOLbGjZW/Zk4nUX4kv1MZWzFo5t2McMsQ==}
+  '@vue/language-plugin-pug@3.0.3':
+    resolution: {integrity: sha512-LZF8NgfpFoOhq2kJ5dV2IsmmoUHZpVmbLq5o0wRCSYJ7sJrBntKKYMSJOLmUxeV1pWKTZ/oKGGzmpzV9f9A7dA==}
 
   '@vue/reactivity@3.5.17':
     resolution: {integrity: sha512-l/rmw2STIscWi7SNJp708FK4Kofs97zc/5aEPQh4bOsReD/8ICuBcEmS7KGwDj5ODQLYWVN2lNibKJL1z5b+Lw==}
@@ -1920,9 +1920,9 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.3
 
-  '@vue/language-plugin-pug@3.0.2':
+  '@vue/language-plugin-pug@3.0.3':
     dependencies:
-      '@volar/source-map': 2.4.19
+      '@volar/source-map': 2.4.20
       volar-service-pug: 0.0.65
 
   '@vue/reactivity@3.5.17':
