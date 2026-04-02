@@ -22,7 +22,7 @@ importers:
         version: 7.1.0
       lodash-es:
         specifier: ^4.17.21
-        version: 4.17.23
+        version: 4.18.1
     devDependencies:
       '@tailwindcss/vite':
         specifier: 4.2.2
@@ -1160,8 +1160,8 @@ packages:
     resolution: {integrity: sha512-WunYko2W1NcdfAFpuLUoucsgULmgDBRkdxHxWQ7mK0cQqwPiy8E1enjuRBrhLtZkB5iScJ1XIPdhVEFK8aOLSg==}
     engines: {node: '>=14'}
 
-  lodash-es@4.17.23:
-    resolution: {integrity: sha512-kVI48u3PZr38HdYz98UmfPnXl2DXrpdctLrFLCd3kOx1xUkOmpFPx7gCWWM5MPkL/fD8zb+Ph0QzjGFs4+hHWg==}
+  lodash-es@4.18.1:
+    resolution: {integrity: sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==}
 
   lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
@@ -2416,7 +2416,7 @@ snapshots:
       pkg-types: 2.1.0
       quansync: 0.2.10
 
-  lodash-es@4.17.23: {}
+  lodash-es@4.18.1: {}
 
   lodash@4.17.21: {}
 
