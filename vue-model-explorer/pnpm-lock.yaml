@@ -26,10 +26,10 @@ importers:
     devDependencies:
       '@tailwindcss/vite':
         specifier: 4.2.2
-        version: 4.2.2(vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.98.0))
+        version: 4.2.2(vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.99.0))
       '@vitejs/plugin-vue':
         specifier: ^6.0.0
-        version: 6.0.5(vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.98.0))(vue@3.5.31(typescript@6.0.2))
+        version: 6.0.5(vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.99.0))(vue@3.5.31(typescript@6.0.2))
       '@vue/language-plugin-pug':
         specifier: ^3.0.0
         version: 3.2.6
@@ -41,7 +41,7 @@ importers:
         version: 3.0.4
       sass:
         specifier: ^1.86.0
-        version: 1.98.0
+        version: 1.99.0
       tailwindcss:
         specifier: 4.2.2
         version: 4.2.2
@@ -50,10 +50,10 @@ importers:
         version: 6.0.2
       vite:
         specifier: ^8.0.1
-        version: 8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.98.0)
+        version: 8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.99.0)
       vite-plugin-dts:
         specifier: ^4.5.3
-        version: 4.5.4(rollup@4.55.1)(typescript@6.0.2)(vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.98.0))
+        version: 4.5.4(rollup@4.55.1)(typescript@6.0.2)(vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.99.0))
       vue:
         specifier: ^3.5.13
         version: 3.5.31(typescript@6.0.2)
@@ -1313,8 +1313,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  sass@1.98.0:
-    resolution: {integrity: sha512-+4N/u9dZ4PrgzGgPlKnaaRQx64RO0JBKs9sDhQ2pLgN6JQZ25uPQZKQYaBJU48Kd5BxgXoJ4e09Dq7nMcOUW3A==}
+  sass@1.99.0:
+    resolution: {integrity: sha512-kgW13M54DUB7IsIRM5LvJkNlpH+WhMpooUcaWGFARkF1Tc82v9mIWkCbCYf+MBvpIUBSeSOTilpZjEPr2VYE6Q==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -1934,12 +1934,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.2.2
       '@tailwindcss/oxide-win32-x64-msvc': 4.2.2
 
-  '@tailwindcss/vite@4.2.2(vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.98.0))':
+  '@tailwindcss/vite@4.2.2(vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.99.0))':
     dependencies:
       '@tailwindcss/node': 4.2.2
       '@tailwindcss/oxide': 4.2.2
       tailwindcss: 4.2.2
-      vite: 8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.98.0)
+      vite: 8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.99.0)
 
   '@tybys/wasm-util@0.10.1':
     dependencies:
@@ -1955,10 +1955,10 @@ snapshots:
 
   '@types/web-bluetooth@0.0.21': {}
 
-  '@vitejs/plugin-vue@6.0.5(vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.98.0))(vue@3.5.31(typescript@6.0.2))':
+  '@vitejs/plugin-vue@6.0.5(vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.99.0))(vue@3.5.31(typescript@6.0.2))':
     dependencies:
       '@rolldown/pluginutils': 1.0.0-rc.2
-      vite: 8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.98.0)
+      vite: 8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.99.0)
       vue: 3.5.31(typescript@6.0.2)
 
   '@volar/language-core@2.4.13':
@@ -2634,7 +2634,7 @@ snapshots:
       fsevents: 2.3.3
     optional: true
 
-  sass@1.98.0:
+  sass@1.99.0:
     dependencies:
       chokidar: 4.0.3
       immutable: 5.1.5
@@ -2688,7 +2688,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite-plugin-dts@4.5.4(rollup@4.55.1)(typescript@6.0.2)(vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.98.0)):
+  vite-plugin-dts@4.5.4(rollup@4.55.1)(typescript@6.0.2)(vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.99.0)):
     dependencies:
       '@microsoft/api-extractor': 7.52.8
       '@rollup/pluginutils': 5.1.4(rollup@4.55.1)
@@ -2701,13 +2701,13 @@ snapshots:
       magic-string: 0.30.17
       typescript: 6.0.2
     optionalDependencies:
-      vite: 8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.98.0)
+      vite: 8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.99.0)
     transitivePeerDependencies:
       - '@types/node'
       - rollup
       - supports-color
 
-  vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.98.0):
+  vite@8.0.3(esbuild@0.27.2)(jiti@2.6.1)(sass@1.99.0):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
@@ -2718,7 +2718,7 @@ snapshots:
       esbuild: 0.27.2
       fsevents: 2.3.3
       jiti: 2.6.1
-      sass: 1.98.0
+      sass: 1.99.0
 
   void-elements@3.1.0: {}
 
