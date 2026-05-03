@@ -25,7 +25,7 @@ jobs:
           node-version-file: vue-model-explorer/.node-version
 
       - name: Install pnpm
-        run: npm install -g pnpm@10
+        run: npm install -g pnpm@11
 
       - name: Set pnpm store directory
         run: echo "PNPM_STORE_PATH=$(pnpm store path)" >> $GITHUB_ENV
@@ -34,8 +34,8 @@ jobs:
         uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         with:
           path: ${{ env.PNPM_STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: ${{ runner.os }}-pnpm-store-
+          key: ${{ runner.os }}-pnpm-store-v2-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-store-v2-
 
       - name: Install NPM packages
         run: pnpm install --frozen-lockfile --loglevel=warn
