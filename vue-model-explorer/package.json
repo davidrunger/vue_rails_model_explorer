@@ -19,7 +19,7 @@
   "dependencies": {
     "@vueuse/core": "^14.0.0",
     "cytoscape": "^3.31.1",
-    "cytoscape-dagre": "^2.5.0",
+    "cytoscape-dagre": "^3.0.0",
     "fuse.js": "^7.1.0",
     "lodash-es": "^4.17.21"
   },
