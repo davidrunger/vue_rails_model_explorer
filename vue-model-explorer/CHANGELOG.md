@@ -1,3 +1,7 @@
+## v0.3.2 (2026-05-16)
+
+- Update dependencies.
+
 ## v0.3.1 (2025-05-29)
 
 ### Internal
