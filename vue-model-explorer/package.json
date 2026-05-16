@@ -5,7 +5,7 @@
   "author": "David Runger",
   "type": "module",
   "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/src/index.d.ts",
   "files": [
     "dist"
   ],
