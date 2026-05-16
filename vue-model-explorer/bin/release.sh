@@ -2,6 +2,12 @@
 
 set -euo pipefail # exit on any error, don't allow undefined variables, pipes don't swallow errors
 
+# Check that we are logged in to NPM.
+if ! npm whoami &>/dev/null; then
+  echo "Error: Not logged in to NPM. Run 'npm login' first."
+  exit 1
+fi
+
 if [ "$(branch)" != "$(main-branch)" ]; then
   echo "Error: Not on main branch. First, merge PR to prepare the release."
   exit 1
