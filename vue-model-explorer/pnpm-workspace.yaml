@@ -1,3 +1,4 @@
 allowBuilds:
   esbuild: true
   '@parcel/watcher': false
+minimumReleaseAge: 0 # Don't require waiting any amount of time to install a new release.
