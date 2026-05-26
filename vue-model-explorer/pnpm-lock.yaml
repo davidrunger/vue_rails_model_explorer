@@ -32,7 +32,7 @@ importers:
         version: 6.0.7(vite@8.0.14(esbuild@0.27.2)(jiti@2.7.0)(sass@1.100.0))(vue@3.5.34(typescript@6.0.3))
       '@vue/language-plugin-pug':
         specifier: ^3.0.0
-        version: 3.3.1
+        version: 3.3.2
       prettier:
         specifier: ^3.5.3
         version: 3.8.3
@@ -755,8 +755,8 @@ packages:
   '@vue/language-core@3.3.1':
     resolution: {integrity: sha512-NP8g6V7x81NVOXbLupUvYY6i6LqUkjkVowe2epRedmpgaFCOdjgWHE/rQBvEJ4r7koAYODIjGeBWEdt6n7jYXQ==}
 
-  '@vue/language-plugin-pug@3.3.1':
-    resolution: {integrity: sha512-lJKSn/CnikR/gVweD3t5ozvAEEuDoUmNopJKcau+zSa+o0h/MHabXJ6Sr3Y9u9/NTrJrR9M6nkmmXe5VaxM38A==}
+  '@vue/language-plugin-pug@3.3.2':
+    resolution: {integrity: sha512-iJuk+FciWAt3AznYnrI8iJ9fQe4m3cKBlNgBhKUg61NVateX5uzwEdTWePEQCup+R2qUZcKyiUhQ87ptAIZ/2g==}
 
   '@vue/reactivity@3.5.34':
     resolution: {integrity: sha512-y9XDjCEuBp+98k+UL5dbYkh57AHU4o6cxZedOPXw3bmrZZYLQsVHguGurq7hVrPCSrQtrnz1f9dssyFr+dMXfQ==}
@@ -839,8 +839,8 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  brace-expansion@1.1.14:
-    resolution: {integrity: sha512-MWPGfDxnyzKU7rNOW9SP/c50vi3xrmrua/+6hfPbCS2ABNWfx24vPidzvC7krjU/RTo235sV776ymlsMtGKj8g==}
+  brace-expansion@1.1.15:
+    resolution: {integrity: sha512-EwOCDEex4quD37XhqM3omwtMoJjr//isUZz1JopUNWms+4Z2ViyM/k1YIRePpoVNnQhENnxtFjLaxNHrT7xIUg==}
 
   call-bind-apply-helpers@1.0.2:
     resolution: {integrity: sha512-Sp1ablJ0ivDkSzjcaJdxEunN5/XvksFJ2sMBFfq6x0ryhQV/2b/KwFe21cMpmHtPOSij8K99/wSfoEuTObmuMQ==}
@@ -2024,7 +2024,7 @@ snapshots:
       path-browserify: 1.0.1
       picomatch: 4.0.4
 
-  '@vue/language-plugin-pug@3.3.1':
+  '@vue/language-plugin-pug@3.3.2':
     dependencies:
       '@volar/source-map': 2.4.28
       muggle-string: 0.4.1
@@ -2117,7 +2117,7 @@ snapshots:
   balanced-match@1.0.2:
     optional: true
 
-  brace-expansion@1.1.14:
+  brace-expansion@1.1.15:
     dependencies:
       balanced-match: 1.0.2
       concat-map: 0.0.1
@@ -2421,7 +2421,7 @@ snapshots:
 
   minimatch@3.0.8:
     dependencies:
-      brace-expansion: 1.1.14
+      brace-expansion: 1.1.15
     optional: true
 
   mlly@1.8.2:
