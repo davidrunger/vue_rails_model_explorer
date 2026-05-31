@@ -32,7 +32,7 @@ importers:
         version: 6.0.7(vite@8.0.14(esbuild@0.27.2)(jiti@2.7.0)(sass@1.100.0))(vue@3.5.35(typescript@6.0.3))
       '@vue/language-plugin-pug':
         specifier: ^3.0.0
-        version: 3.3.2
+        version: 3.3.3
       prettier:
         specifier: ^3.5.3
         version: 3.8.3
@@ -767,8 +767,8 @@ packages:
   '@vue/language-core@3.3.3':
     resolution: {integrity: sha512-X6p+7nfY7vVT6dQwUJ+v0Jfq/lwIfhL2jMi91dQ3ln4hnlGXlxsDu/FNkeyHYgvYtyQy18ZX76IZy7X4diDbiQ==}
 
-  '@vue/language-plugin-pug@3.3.2':
-    resolution: {integrity: sha512-iJuk+FciWAt3AznYnrI8iJ9fQe4m3cKBlNgBhKUg61NVateX5uzwEdTWePEQCup+R2qUZcKyiUhQ87ptAIZ/2g==}
+  '@vue/language-plugin-pug@3.3.3':
+    resolution: {integrity: sha512-tS4AXuhvQJEb7zrLClZf+uzfD5mLkWqJeD+3YbjGtg1KyQmoJN4Adz1+84oZAohJUlu1S42Y5qlMXRxFHsnHgQ==}
 
   '@vue/reactivity@3.5.35':
     resolution: {integrity: sha512-tVc+SsHConvh/Lz64qq1pP3rYArBmK42xonovEcxY74SQtvctZodG/zhq54P5dr38cVuw25d27cPNRdlMidpGQ==}
@@ -2045,7 +2045,7 @@ snapshots:
       path-browserify: 1.0.1
       picomatch: 4.0.4
 
-  '@vue/language-plugin-pug@3.3.2':
+  '@vue/language-plugin-pug@3.3.3':
     dependencies:
       '@volar/source-map': 2.4.28
       muggle-string: 0.4.1
