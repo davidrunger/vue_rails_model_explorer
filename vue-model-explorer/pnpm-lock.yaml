@@ -32,7 +32,7 @@ importers:
         version: 6.0.7(vite@8.0.16(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))(vue@3.5.38(typescript@6.0.3))
       '@vue/language-plugin-pug':
         specifier: ^3.0.0
-        version: 3.3.4
+        version: 3.3.5
       prettier:
         specifier: ^3.5.3
         version: 3.8.4
@@ -761,8 +761,8 @@ packages:
   '@vue/language-core@3.3.4':
     resolution: {integrity: sha512-IuHqQ5zGGOE7CXP72VX6A42IVeIzYv4WAhO6arej11TRNqtdZfGyH8Yr2FOCaDX0dSQG+JwULLoFHGY1igYVjQ==}
 
-  '@vue/language-plugin-pug@3.3.4':
-    resolution: {integrity: sha512-hbp1NakJCUYz/XItrnCwLkcvuJf38CvUJ4pv2CKLlVYaZKUhra/uv0PlVdNkdVTQS3loAHGg9GvmbCXzmJhg6g==}
+  '@vue/language-plugin-pug@3.3.5':
+    resolution: {integrity: sha512-nT6Kr/+K6pcNvuipq3RzLDdke3o4g/9sbvHwVyPjtpbK7naYaXXpilEI5qNY1TH+MzJZPtcPP2ay/dvUiYNf/Q==}
 
   '@vue/reactivity@3.5.38':
     resolution: {integrity: sha512-pG6LV/NDNRbKizcUjFFLAfjaL8mcv4DmR9avNcUw2gDHBzZneuS2TWCmp633ynzxz9YYKNeEPK2I8Wraqy2HUQ==}
@@ -1315,9 +1315,6 @@ packages:
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
-
-  tailwindcss@4.3.0:
-    resolution: {integrity: sha512-y6nxMGB1nMW9R6k96e5gdIFzcfL/gTJRNaqGes1YvkLnPVXzWgbqFF2yLC0T8G774n24cx3Pe8XrKoniCOAH+Q==}
 
   tailwindcss@4.3.1:
     resolution: {integrity: sha512-hk+TB1m+K8CYNrP6rjQaq/Y+4Zylwpa87mLYBKCunwnnQ9p+fHb7kmSfGqyEJoxF/O6CDyABWVFEafNSYKll+Q==}
@@ -2036,7 +2033,7 @@ snapshots:
       path-browserify: 1.0.1
       picomatch: 4.0.4
 
-  '@vue/language-plugin-pug@3.3.4':
+  '@vue/language-plugin-pug@3.3.5':
     dependencies:
       '@volar/source-map': 2.4.28
       muggle-string: 0.4.1
@@ -2664,8 +2661,6 @@ snapshots:
     optional: true
 
   supports-preserve-symlinks-flag@1.0.0: {}
-
-  tailwindcss@4.3.0: {}
 
   tailwindcss@4.3.1: {}
 
