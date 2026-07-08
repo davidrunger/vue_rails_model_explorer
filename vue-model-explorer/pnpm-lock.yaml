@@ -53,13 +53,13 @@ importers:
         version: 8.1.3(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)
       vite-plugin-dts:
         specifier: ^5.0.0
-        version: 5.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.6)(esbuild@0.27.2)(rolldown@1.1.4)(rollup@4.55.1)(typescript@6.0.3)(vite@8.1.3(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))
+        version: 5.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.7)(esbuild@0.27.2)(rolldown@1.1.4)(rollup@4.55.1)(typescript@6.0.3)(vite@8.1.3(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))
       vue:
         specifier: ^3.5.13
         version: 3.5.39(typescript@6.0.3)
       vue-tsc:
         specifier: ^3.0.1
-        version: 3.3.6(typescript@6.0.3)
+        version: 3.3.7(typescript@6.0.3)
 
 packages:
 
@@ -758,8 +758,8 @@ packages:
   '@vue/compiler-ssr@3.5.39':
     resolution: {integrity: sha512-Ce7/wvwMHai74bdszfXExdazFigYnlF9zgCmEQUcM1j0fOymlouZ7XilTYNo8oUjhlnjYOZbGrcYKuqjz89Ucw==}
 
-  '@vue/language-core@3.3.6':
-    resolution: {integrity: sha512-LgBMZAy2sR3cQWknpyaxnI6yBkqDfLBPkbdhwRhQCvzfNJRQXPilgQIrdI/v4ytJ0sAq9bWhaPsjqBqneomJ3Q==}
+  '@vue/language-core@3.3.7':
+    resolution: {integrity: sha512-LzmkKinXAMMoh8Jfi/jMUSDUjuPdv8mynH5WJGKfXyZtDw3hQ6GBaoI6Bcnl/Xqlu32q/0Z6i/trp4VXykzyLw==}
 
   '@vue/language-plugin-pug@3.3.6':
     resolution: {integrity: sha512-7eTlf1i9d/glQBmBK3Ii2dUFxajGG/n8FGroA6y+HXEfNFn0E+DN8KfzOIZVMZoCJKWepduj9Whcfaw9DyKnsg==}
@@ -1458,8 +1458,8 @@ packages:
   vscode-uri@3.1.0:
     resolution: {integrity: sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==}
 
-  vue-tsc@3.3.6:
-    resolution: {integrity: sha512-ERXGgbKSBGFUkavrJ1Iwj0ZVxKqB/5UOx65IXy7fPf2UsoI21n3ssQLwdvx8xyUGgJe9PvSZTM/FYzIdwUDPFA==}
+  vue-tsc@3.3.7:
+    resolution: {integrity: sha512-+C+rgD49wAQ5bUTl2sp5a8Bzg4YoldMNXM+g7CFe604MYcQ8PrZPMQhIjJSzKXtPBCa+C5ayMipqjbA7splekQ==}
     hasBin: true
     peerDependencies:
       typescript: '>=5.0.0'
@@ -2027,7 +2027,7 @@ snapshots:
       '@vue/compiler-dom': 3.5.39
       '@vue/shared': 3.5.39
 
-  '@vue/language-core@3.3.6':
+  '@vue/language-core@3.3.7':
     dependencies:
       '@volar/language-core': 2.4.28
       '@vue/compiler-dom': 3.5.39
@@ -2035,7 +2035,7 @@ snapshots:
       alien-signals: 3.2.1
       muggle-string: 0.4.1
       path-browserify: 1.0.1
-      picomatch: 4.0.4
+      picomatch: 4.0.5
 
   '@vue/language-plugin-pug@3.3.6':
     dependencies:
@@ -2462,7 +2462,8 @@ snapshots:
 
   picocolors@1.1.1: {}
 
-  picomatch@4.0.4: {}
+  picomatch@4.0.4:
+    optional: true
 
   picomatch@4.0.5: {}
 
@@ -2692,7 +2693,7 @@ snapshots:
   universalify@2.0.1:
     optional: true
 
-  unplugin-dts@1.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.6)(esbuild@0.27.2)(rolldown@1.1.4)(rollup@4.55.1)(typescript@6.0.3)(vite@8.1.3(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)):
+  unplugin-dts@1.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.7)(esbuild@0.27.2)(rolldown@1.1.4)(rollup@4.55.1)(typescript@6.0.3)(vite@8.1.3(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)):
     dependencies:
       '@rollup/pluginutils': 5.4.0(rollup@4.55.1)
       '@volar/typescript': 2.4.28
@@ -2705,7 +2706,7 @@ snapshots:
       unplugin: 2.3.11
     optionalDependencies:
       '@microsoft/api-extractor': 7.52.8
-      '@vue/language-core': 3.3.6
+      '@vue/language-core': 3.3.7
       esbuild: 0.27.2
       rolldown: 1.1.4
       rollup: 4.55.1
@@ -2725,9 +2726,9 @@ snapshots:
       punycode: 2.3.1
     optional: true
 
-  vite-plugin-dts@5.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.6)(esbuild@0.27.2)(rolldown@1.1.4)(rollup@4.55.1)(typescript@6.0.3)(vite@8.1.3(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)):
+  vite-plugin-dts@5.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.7)(esbuild@0.27.2)(rolldown@1.1.4)(rollup@4.55.1)(typescript@6.0.3)(vite@8.1.3(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)):
     dependencies:
-      unplugin-dts: 1.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.6)(esbuild@0.27.2)(rolldown@1.1.4)(rollup@4.55.1)(typescript@6.0.3)(vite@8.1.3(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))
+      unplugin-dts: 1.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.7)(esbuild@0.27.2)(rolldown@1.1.4)(rollup@4.55.1)(typescript@6.0.3)(vite@8.1.3(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))
     optionalDependencies:
       '@microsoft/api-extractor': 7.52.8
       rollup: 4.55.1
@@ -2760,10 +2761,10 @@ snapshots:
 
   vscode-uri@3.1.0: {}
 
-  vue-tsc@3.3.6(typescript@6.0.3):
+  vue-tsc@3.3.7(typescript@6.0.3):
     dependencies:
       '@volar/typescript': 2.4.28
-      '@vue/language-core': 3.3.6
+      '@vue/language-core': 3.3.7
       typescript: 6.0.3
 
   vue@3.5.39(typescript@6.0.3):
