@@ -26,10 +26,10 @@ importers:
     devDependencies:
       '@tailwindcss/vite':
         specifier: 4.3.3
-        version: 4.3.3(vite@8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))
+        version: 4.3.3(vite@8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))
       '@vitejs/plugin-vue':
         specifier: ^6.0.0
-        version: 6.0.8(vite@8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))(vue@3.5.40(typescript@7.0.2))
+        version: 6.0.8(vite@8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))(vue@3.5.40(typescript@7.0.2))
       '@vue/language-plugin-pug':
         specifier: ^3.0.0
         version: 3.3.7
@@ -50,10 +50,10 @@ importers:
         version: 7.0.2
       vite:
         specifier: ^8.0.1
-        version: 8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)
+        version: 8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)
       vite-plugin-dts:
         specifier: ^5.0.0
-        version: 5.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.7)(esbuild@0.27.2)(rolldown@1.1.5)(rollup@4.55.1)(typescript@7.0.2)(vite@8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))
+        version: 5.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.7)(esbuild@0.27.2)(rolldown@1.1.5)(rollup@4.55.1)(typescript@7.0.2)(vite@8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))
       vue:
         specifier: ^3.5.13
         version: 3.5.40(typescript@7.0.2)
@@ -1280,11 +1280,6 @@ packages:
   muggle-string@0.4.1:
     resolution: {integrity: sha512-VNTrAak/KhO2i8dqqnqnAHOa3cYBwXEZe9h+D5h/1ZqFSTEFHdM65lR7RoIqq3tBBYavsOXV84NoHXZ0AkPyqQ==}
 
-  nanoid@3.3.15:
-    resolution: {integrity: sha512-y7Wygv/7mEOvxTuEQDB8StXdMRBWf1kR/tlhAzBRUFkB2jfcLOAxO/SHmOO2zgz1pVgK29/kyupn059/bCHdjA==}
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-
   nanoid@3.3.16:
     resolution: {integrity: sha512-bzlKTyNJ7+LdGIIwy8ijFpIqEQIvafahV7eYykJ8Cvh42EdJeODoJ6gUJXpQJvej1BddH8OqTXZNE/KfbWAu8Q==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -1318,10 +1313,6 @@ packages:
 
   pkg-types@2.3.1:
     resolution: {integrity: sha512-y+ichcgc2LrADuhLNAx8DFjVfgz91pRxfZdI3UDhxHvcVEZsenLO+7XaU5vOp0u/7V/wZ+plyuQxtrDlZJ+yeg==}
-
-  postcss@8.5.16:
-    resolution: {integrity: sha512-vuwillviilfKZsg0VGj5R/YwwcHx4SLsIOI/7K6mQkWx+l5cUHTjj5g0AasTBcyXsbfTgrwsUNmVUb5xVwyPwg==}
-    engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.5.19:
     resolution: {integrity: sha512-Mz8SaolMd8nB+G13WkORcxQKHZ/NE4xXevtkJHVuG+guo9/wYKlIMTKAqGdEmYOXR2ijPjTYNHssizdaVSUNdQ==}
@@ -1443,9 +1434,6 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  tailwindcss@4.3.2:
-    resolution: {integrity: sha512-WtctNNSH8A9jlMIqxzuYumOHU5uGZyRv0Q5svQl+oEPy5w84YpBxdb7MdqyiSPQge5jTJ6zFQLq0PFygdccSBA==}
-
   tailwindcss@4.3.3:
     resolution: {integrity: sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==}
 
@@ -1531,8 +1519,8 @@ packages:
       vite:
         optional: true
 
-  vite@8.1.4:
-    resolution: {integrity: sha512-bTT9PsdWO+MQMNG9ZXIP/qM9wGh37DFxTV/sPq9cFpHr3w4jkgef032PkAL9jAqhk3Nz8NQw3O8n6/xFkqO4QQ==}
+  vite@8.1.5:
+    resolution: {integrity: sha512-7ULLwsCdYx/nRyrpiEwvqb5TFHrMVZyBt+rg/OAXT7rgj/z+DtTDyKFeLAdDkubDVDKD8jOsndmy7m55XcfUsw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -2083,12 +2071,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.3.3
       '@tailwindcss/oxide-win32-x64-msvc': 4.3.3
 
-  '@tailwindcss/vite@4.3.3(vite@8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))':
+  '@tailwindcss/vite@4.3.3(vite@8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))':
     dependencies:
       '@tailwindcss/node': 4.3.3
       '@tailwindcss/oxide': 4.3.3
       tailwindcss: 4.3.3
-      vite: 8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)
+      vite: 8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)
 
   '@tybys/wasm-util@0.10.3':
     dependencies:
@@ -2165,10 +2153,10 @@ snapshots:
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
 
-  '@vitejs/plugin-vue@6.0.8(vite@8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))(vue@3.5.40(typescript@7.0.2))':
+  '@vitejs/plugin-vue@6.0.8(vite@8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))(vue@3.5.40(typescript@7.0.2))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
-      vite: 8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)
+      vite: 8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)
       vue: 3.5.40(typescript@7.0.2)
 
   '@volar/language-core@2.4.28':
@@ -2633,8 +2621,6 @@ snapshots:
 
   muggle-string@0.4.1: {}
 
-  nanoid@3.3.15: {}
-
   nanoid@3.3.16: {}
 
   node-addon-api@7.1.1:
@@ -2663,12 +2649,6 @@ snapshots:
       confbox: 0.2.4
       exsolve: 1.1.0
       pathe: 2.0.3
-
-  postcss@8.5.16:
-    dependencies:
-      nanoid: 3.3.15
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
 
   postcss@8.5.19:
     dependencies:
@@ -2860,8 +2840,6 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  tailwindcss@4.3.2: {}
-
   tailwindcss@4.3.3: {}
 
   tapable@2.3.3: {}
@@ -2907,7 +2885,7 @@ snapshots:
   universalify@2.0.1:
     optional: true
 
-  unplugin-dts@1.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.7)(esbuild@0.27.2)(rolldown@1.1.5)(rollup@4.55.1)(typescript@7.0.2)(vite@8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)):
+  unplugin-dts@1.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.7)(esbuild@0.27.2)(rolldown@1.1.5)(rollup@4.55.1)(typescript@7.0.2)(vite@8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)):
     dependencies:
       '@rollup/pluginutils': 5.4.0(rollup@4.55.1)
       '@volar/typescript': 2.4.28
@@ -2924,7 +2902,7 @@ snapshots:
       esbuild: 0.27.2
       rolldown: 1.1.5
       rollup: 4.55.1
-      vite: 8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)
+      vite: 8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -2940,13 +2918,13 @@ snapshots:
       punycode: 2.3.1
     optional: true
 
-  vite-plugin-dts@5.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.7)(esbuild@0.27.2)(rolldown@1.1.5)(rollup@4.55.1)(typescript@7.0.2)(vite@8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)):
+  vite-plugin-dts@5.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.7)(esbuild@0.27.2)(rolldown@1.1.5)(rollup@4.55.1)(typescript@7.0.2)(vite@8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)):
     dependencies:
-      unplugin-dts: 1.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.7)(esbuild@0.27.2)(rolldown@1.1.5)(rollup@4.55.1)(typescript@7.0.2)(vite@8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))
+      unplugin-dts: 1.0.3(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.7)(esbuild@0.27.2)(rolldown@1.1.5)(rollup@4.55.1)(typescript@7.0.2)(vite@8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0))
     optionalDependencies:
       '@microsoft/api-extractor': 7.52.8
       rollup: 4.55.1
-      vite: 8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)
+      vite: 8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0)
     transitivePeerDependencies:
       - '@rspack/core'
       - '@vue/language-core'
@@ -2956,11 +2934,11 @@ snapshots:
       - typescript
       - webpack
 
-  vite@8.1.4(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0):
+  vite@8.1.5(esbuild@0.27.2)(jiti@2.7.0)(sass@1.101.0):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.5
-      postcss: 8.5.16
+      postcss: 8.5.19
       rolldown: 1.1.5
       tinyglobby: 0.2.17
     optionalDependencies:
