@@ -26,10 +26,10 @@ importers:
     devDependencies:
       '@tailwindcss/vite':
         specifier: 4.3.3
-        version: 4.3.3(vite@8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))
+        version: 4.3.3(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))
       '@vitejs/plugin-vue':
         specifier: ^6.0.0
-        version: 6.0.9(vite@8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))(vue@3.5.43(typescript@7.0.2))
+        version: 6.0.9(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))(vue@3.5.43(typescript@7.0.2))
       '@vue/language-plugin-pug':
         specifier: ^3.0.0
         version: 3.3.11
@@ -50,10 +50,10 @@ importers:
         version: 7.0.2
       vite:
         specifier: ^8.0.1
-        version: 8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)
+        version: 8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)
       vite-plugin-dts:
         specifier: ^5.0.0
-        version: 5.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.11)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))
+        version: 5.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.11)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))
       vue:
         specifier: ^3.5.13
         version: 3.5.43(typescript@7.0.2)
@@ -1611,8 +1611,8 @@ packages:
       vite:
         optional: true
 
-  vite@8.3.1:
-    resolution: {integrity: sha512-/bvH9E9tmCXRGp2uXY3WbOldqpTwFkbha/8ANaEQ6VkxhH60KyqLwgZq6lG2y+4uT55x9+9eUHMpQ7uGnOCKjA==}
+  vite@8.3.2:
+    resolution: {integrity: sha512-SQr1x6W5vVSbROg7vsyXIaxK9b0G7zsT68acdWWRmnBUsgDieLCRG+Rep9WdZgcposvv/GSnr4GUUBqB3vXq6w==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -2132,12 +2132,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.3.3
       '@tailwindcss/oxide-win32-x64-msvc': 4.3.3
 
-  '@tailwindcss/vite@4.3.3(vite@8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))':
+  '@tailwindcss/vite@4.3.3(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))':
     dependencies:
       '@tailwindcss/node': 4.3.3
       '@tailwindcss/oxide': 4.3.3
       tailwindcss: 4.3.3
-      vite: 8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)
+      vite: 8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)
 
   '@types/argparse@1.0.38':
     optional: true
@@ -2209,10 +2209,10 @@ snapshots:
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
 
-  '@vitejs/plugin-vue@6.0.9(vite@8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))(vue@3.5.43(typescript@7.0.2))':
+  '@vitejs/plugin-vue@6.0.9(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))(vue@3.5.43(typescript@7.0.2))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
-      vite: 8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)
+      vite: 8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)
       vue: 3.5.43(typescript@7.0.2)
 
   '@volar/language-core@2.4.28':
@@ -2992,7 +2992,7 @@ snapshots:
   universalify@2.0.1:
     optional: true
 
-  unplugin-dts@1.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.11)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)):
+  unplugin-dts@1.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.11)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)):
     dependencies:
       '@rollup/pluginutils': 5.4.0(rollup@4.55.1)
       '@volar/typescript': 2.4.28(typescript@7.0.2)
@@ -3010,7 +3010,7 @@ snapshots:
       esbuild: 0.27.2
       rolldown: 1.2.11
       rollup: 4.55.1
-      vite: 8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)
+      vite: 8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -3026,13 +3026,13 @@ snapshots:
       punycode: 2.3.1
     optional: true
 
-  vite-plugin-dts@5.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.11)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)):
+  vite-plugin-dts@5.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.11)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)):
     dependencies:
-      unplugin-dts: 1.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.11)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))
+      unplugin-dts: 1.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.11)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))
     optionalDependencies:
       '@microsoft/api-extractor': 7.52.8
       rollup: 4.55.1
-      vite: 8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)
+      vite: 8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)
     transitivePeerDependencies:
       - '@rspack/core'
       - '@vue/language-core'
@@ -3042,7 +3042,7 @@ snapshots:
       - typescript
       - webpack
 
-  vite@8.3.1(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1):
+  vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1):
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
