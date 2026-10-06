@@ -53,13 +53,13 @@ importers:
         version: 8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)
       vite-plugin-dts:
         specifier: ^5.0.0
-        version: 5.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.11)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))
+        version: 5.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.12)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))
       vue:
         specifier: ^3.5.13
         version: 3.5.43(typescript@7.0.2)
       vue-tsc:
         specifier: ^3.0.1
-        version: 3.3.11(typescript@7.0.2)
+        version: 3.3.12(typescript@7.0.2)
 
 packages:
 
@@ -889,8 +889,8 @@ packages:
   '@vue/compiler-ssr@3.5.43':
     resolution: {integrity: sha512-GF62orf7KiJX9RqrHNGrYBudsQGD0OhJ5nDs90O8UiDuS40+YMYomiXu6w6EuvtXuRDc3MSNis3EaaSKAVSWpg==}
 
-  '@vue/language-core@3.3.11':
-    resolution: {integrity: sha512-QJmpliwAVpC/OxubIByPAhNzsQPRc8/gxlN2qnVzVfIMjMDz/9RnXRFoetjz5yEgXVXyp4LqhXq3V53PjmNzFw==}
+  '@vue/language-core@3.3.12':
+    resolution: {integrity: sha512-k7uIKR0n4CBidk233y7cac9osnDQ5WRidTl6nsrNvpZ3nf8cx9iJxRVsRzVsoPRHbowT/iKgGMTS9RGov3jeIA==}
 
   '@vue/language-plugin-pug@3.3.12':
     resolution: {integrity: sha512-bf9Dvtb5D42wvOEfcRzyLQjo5cPAbRb8qTDKh1BASGjNglFhPYm7B88BBchfGwVr2PIDfRfNCQPr6ShHRsb0MA==}
@@ -1664,8 +1664,8 @@ packages:
   vscode-uri@3.1.0:
     resolution: {integrity: sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==}
 
-  vue-tsc@3.3.11:
-    resolution: {integrity: sha512-gOb0B9rtU2+f1dszwPqSH5kAieIF9ReeLhD3kSRNHv5WZZUQz/JdVXW0RTdqhNTMlQkqKzrTTviqKr/4FYZraQ==}
+  vue-tsc@3.3.12:
+    resolution: {integrity: sha512-kbpaz18O9jPVkXVHD1BEjpUXM6WhXSu+62L1sGGr6Wbzd8GbvkBQWjoj3KZ/C0aq2MZllce7UdtWzwCIYsBMGA==}
     hasBin: true
     peerDependencies:
       typescript: '>=5.0.0'
@@ -2259,7 +2259,7 @@ snapshots:
       '@vue/compiler-dom': 3.5.43
       '@vue/shared': 3.5.43
 
-  '@vue/language-core@3.3.11':
+  '@vue/language-core@3.3.12':
     dependencies:
       '@volar/language-core': 2.4.28
       '@vue/compiler-dom': 3.5.43
@@ -2992,7 +2992,7 @@ snapshots:
   universalify@2.0.1:
     optional: true
 
-  unplugin-dts@1.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.11)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)):
+  unplugin-dts@1.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.12)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)):
     dependencies:
       '@rollup/pluginutils': 5.4.0(rollup@4.55.1)
       '@volar/typescript': 2.4.28(typescript@7.0.2)
@@ -3006,7 +3006,7 @@ snapshots:
       unplugin: 2.3.11
     optionalDependencies:
       '@microsoft/api-extractor': 7.52.8
-      '@vue/language-core': 3.3.11
+      '@vue/language-core': 3.3.12
       esbuild: 0.27.2
       rolldown: 1.2.11
       rollup: 4.55.1
@@ -3026,9 +3026,9 @@ snapshots:
       punycode: 2.3.1
     optional: true
 
-  vite-plugin-dts@5.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.11)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)):
+  vite-plugin-dts@5.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.12)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1)):
     dependencies:
-      unplugin-dts: 1.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.11)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))
+      unplugin-dts: 1.1.1(@microsoft/api-extractor@7.52.8)(@vue/language-core@3.3.12)(esbuild@0.27.2)(rolldown@1.2.11)(rollup@4.55.1)(supports-color@8.1.1)(typescript@7.0.2)(vite@8.3.2(esbuild@0.27.2)(jiti@2.7.0)(sass@1.105.1))
     optionalDependencies:
       '@microsoft/api-extractor': 7.52.8
       rollup: 4.55.1
@@ -3061,10 +3061,10 @@ snapshots:
 
   vscode-uri@3.1.0: {}
 
-  vue-tsc@3.3.11(typescript@7.0.2):
+  vue-tsc@3.3.12(typescript@7.0.2):
     dependencies:
       '@volar/typescript': 2.4.28(typescript@7.0.2)
-      '@vue/language-core': 3.3.11
+      '@vue/language-core': 3.3.12
       typescript: 7.0.2
 
   vue@3.5.43(typescript@7.0.2):
